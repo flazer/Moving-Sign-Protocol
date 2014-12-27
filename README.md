@@ -7,12 +7,12 @@ Written by flazer, with the great help of phia at c31c3 - 2014
 
 HowTo:
 
-- Checkout project.
+- Checkout project
 - Open led.py
 - Change device-specific-things
 
 - cli:
- led.py "message you want to display" 
+led.py "message you want to display" 
 
 Optional params:
 -a: Animation
