@@ -16,7 +16,7 @@ def replace(message):
   for key in replacements:
     message = message.replace(key, replacements.get(key))
 
-  message = re.sub(r'[^\w\s!.,?+:~_-]', '', message)
+  message = re.sub(r'[^\w\s!.=,?+:~_-]', '', message)
   return message
 
 def setColours(message):

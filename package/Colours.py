@@ -1,3 +1,5 @@
+import random
+
 list = {"red": "B",
         "green": "C",
         "orange": "G",
@@ -8,8 +10,13 @@ list = {"red": "B",
 def get(colour):
   if colour ==  "multi":
     return ''
-  result = list.itervalues().next()
-  if(colour is not None and colour in list):
-    result = list.get(colour)
+
+  if colour == "auto":
+    result = random.choice(list.values())
+    print result
+  else:
+    result = list.itervalues().next()
+    if(colour is not None and colour in list):
+      result = list.get(colour)
 
   return "~FD" + result
