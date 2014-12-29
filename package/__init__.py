@@ -3,11 +3,12 @@ def _import_package_files():
     import os
     import sys
     import traceback
-
+    from pprint import pprint
+    
     package_path = os.path.split(__file__)[0]
     package_directory = os.path.split(package_path)[1]
 
-    for fn in os.listdir(package_directory):
+    for fn in os.listdir(package_path):
         globals_, locals_ = globals(), locals()
         # process all python files in directory that don't start with underscore
         if fn[0] != '_' and fn.split('.')[-1] in ('py', 'pyw'):
