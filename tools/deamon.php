@@ -19,8 +19,7 @@
   $file = "/var/spool/gammu/inbox/".$name;
 
   $time = time();
-  $text = file_get_contents($file);
-
+  $text = escapeshellcmd(file_get_contents($file));
   if(!$text) die();
 
   $meta = explode(".",$name);
